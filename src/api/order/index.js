@@ -20,7 +20,7 @@
  const router = new Router()
 
  //POST Request http://localhost:9090/order
-router.post('/',checkAuth(true, ['CUSTOMER']), OrderCreate)
+router.post('/', /*checkAuth(true, ['CUSTOMER']),*/ OrderCreate)
 
  //POST Request http://localhost:9090/order/accept-order/123
 router.put('/accept-order/:id',checkAuth(true,['RESTAURANTADMIN']), OrderAccept)

@@ -66,3 +66,26 @@ if (err) {
   
 
 }
+
+export const update = (req, res) => {
+  users.findByIdAndUpdate(req.params.id, req.body, { new: true}, (err, updatedObj) => {
+   if (err) {
+     res.send(err);
+   } else {
+     res.send(updatedObj);
+   }
+ })
+}
+
+export const index = (req, res) =>
+  sendAllusers(res);
+
+  const sendAllusers = (res) => {
+    users.find((er, user) => {
+      if (!er) {
+        res.send(user);
+      } else {
+        res.send(er);
+      }
+    })
+  }

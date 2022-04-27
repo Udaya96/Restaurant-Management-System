@@ -2,10 +2,10 @@ import { Router } from 'express'
 import {checkAuth} from '../helpers'
 import {
   create,
-  signup
+  signup,
 //   index,
 //   show,
-//   update,
+  // update
 //   destroy,
 //   searchStudent,
 //   ShowMyProfile
@@ -14,14 +14,14 @@ import {
 const router = new Router()
 
 //POST Request http://localhost:8080/customer
-// router.post('/', checkAuth(true, ['CUSTOMER']),create)
+ router.post('/',/* checkAuth(true, ['CUSTOMER']),*/create)
 
  router.post('/signup',signup)
 
 // router.get('/me',checkAuth(true),ShowMyProfile)
 
 // //PUT Request http://localhost:8080/customer/123
-// router.put('/:id', checkAuth(true, ['ADMIN']), update)
+// router.put('/:id', /*checkAuth(true, ['ADMIN']),*/ update)
 
 // //GET Request http://localhost:8080/customer/search
 // router.get('/search', checkAuth(true, ['ADMIN','FACULTY']),searchStudent)

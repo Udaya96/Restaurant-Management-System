@@ -3,11 +3,11 @@ import mongoose from 'mongoose'
 const userSchema = new mongoose.Schema ({
     username:{
         type:String,
-        required:true
+     required:true
     },
     password:{
         type:String,
-        required:true
+     required:true
     },
     newpassword:{
         type:String,
@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema ({
     },
      role:{
      type:String,
-       required:true,
+    //   required:true,
     //   enum:['CUSTOMER','RESTAURANTADMIN','ADMIN']
         
      }

@@ -25,17 +25,17 @@ export const signup = (req, res) => {
 
 
 
-// export const create = (req, res) => {
-// const customers = req.body;
+export const create = (req, res) => {
+const customers = req.body;
 // customers.createdBy = req.user.id
-//     customer.create(customers ,(err, result) => {
-//     if (err) {
-//       res.send(err);
-//     } else {
-//       res.send(result);
-//     }
-//   })
-//  }
+    customer.create(customers ,(err, result) => {
+    if (err) {
+      res.send(err);
+    } else {
+      res.send(result);
+    }
+  })
+ }
  
 // export const ShowMyProfile =(req,res) => 
 // customer.findById(req.user.id, (err, result) => {

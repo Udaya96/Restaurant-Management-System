@@ -1,10 +1,10 @@
 import mongoose from 'mongoose'
 
 const AdminSchema = new mongoose.Schema ({
-    //  name:{
-    //     type:String,
-    //     required:true
-    // },
+     name:{
+        type:String,
+        required:true
+    },
    
     //  orderid:{
     //  type:mongoose.SchemaTypes.ObjectId,

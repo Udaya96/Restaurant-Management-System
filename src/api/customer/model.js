@@ -10,6 +10,7 @@ email:{
     required:true
 }
 
+
 })
 
 const model = mongoose.model('customer', customerSchema)

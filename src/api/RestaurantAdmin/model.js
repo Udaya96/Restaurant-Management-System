@@ -3,46 +3,46 @@ import mongoose from 'mongoose'
 const restaurantschema = new mongoose.Schema({
     Userid: {
         type: String,
-        required: true,
+        // required: true,
         type: mongoose.SchemaTypes.ObjectId,
         ref:'users'
     },
 
     restaurantname: {
         type: String,
-        required: true
+        // required: true
     },
 
 
     restauranttype: {
         type: String,
-        required: true,
-        enum: ['DINEIN', 'TAKE-AWAY']
+        // required: true,
+        // enum: ['DINEIN', 'TAKE-AWAY']
     },
     cuisinetype: {
         type: String,
-        required: true,
-        enum:['CHINESE','ITALIAN','INDIAN','MEXICAN']
+        // // required: true,
+        // enum:['CHINESE','ITALIAN','INDIAN','MEXICAN']
 
     },
 
     description: {
         type: String,
-        required: true
+        // required: true
     },
     address: {
         type: String,
-        required: true
+        // required: true
     },
     openingtime: {
         type: String,
-        required: true,
-        default: '10am'
+        // required: true,
+        // default: '10am'
     },
     closingtime: {
         type: String,
-        required: true,
-        default: '9pm'
+        // required: true,
+        // default: '9pm'
     },
 
 }, {

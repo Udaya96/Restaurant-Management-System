@@ -1,5 +1,5 @@
  import { Router } from 'express'
-
+ import {checkAuth} from '../helpers'
 
  import {
    create,
@@ -14,7 +14,7 @@
  const router = new Router()
 
 // //POST Request http://localhost:9090/menu
-router.post('/', create)
+router.post('/', /*checkAuth(true,['RESTAURANTADMIN']),*/create)
 
 // //PUT Request http://localhost:9090/menu/123
  router.put('/:id', update)
@@ -23,7 +23,7 @@ router.post('/', create)
  router.get('/search', searchmenu)
 
 // //GET Request http://localhost:9090/menu
- router.get('/', index)
+ router.get('/',checkAuth(true,['RESTAURANTADMIN']),index)
 
 // //GET Request http://localhost:9090/menu/123
  router.get('/:id', show)

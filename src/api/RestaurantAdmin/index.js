@@ -18,7 +18,7 @@ searchRestaurantAdmin
 
 const router = new Router()
 //localhost:9090/RestaurantAdmin
-router.post('/',checkAuth(true),create)
+router.post('/',/*checkAuth(true),*/create)
 
 // //PUT Request http://localhost:9090/RestaurantAdmin/123
 router.put('/:id', update)
